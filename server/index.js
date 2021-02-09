@@ -19,6 +19,9 @@ app.use(express.json());
 app.use(morgan("tiny"));
 
 // routes
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+});
 app.use("/api", userRouter);
 app.use("/api", listRouter);
 app.use("/api", taskRouter);
