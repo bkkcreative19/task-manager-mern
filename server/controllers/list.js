@@ -1,4 +1,5 @@
 import List from "../models/list.js";
+import { deleteTasksFromList } from "../controllers/task.js";
 
 const createList = (req, res) => {
   // We want to create a new list and return the new list document back to the user (which includes the id)

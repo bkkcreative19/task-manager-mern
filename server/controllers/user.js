@@ -54,7 +54,6 @@ const Login = (req, res) => {
             .header("x-refresh-token", authTokens.refreshToken)
             .header("x-access-token", authTokens.accessToken)
             .send(user);
-          console.log(req.headers);
         });
     })
     .catch((e) => {

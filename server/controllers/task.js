@@ -105,4 +105,12 @@ const deleteTask = (req, res) => {
     });
 };
 
-export { addTask, getTasks, updateTasks, deleteTask };
+let deleteTasksFromList = (_listId) => {
+  Task.deleteMany({
+    _listId,
+  }).then(() => {
+    console.log("Tasks from " + _listId + " were deleted!");
+  });
+};
+
+export { addTask, getTasks, updateTasks, deleteTask, deleteTasksFromList };
